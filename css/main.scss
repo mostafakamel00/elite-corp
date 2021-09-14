@@ -1,0 +1,513 @@
+/*start global rules*/
+body {
+  box-sizing: border-box;
+  background: #000000;
+}
+$firstcolor: #08526d;
+$secondcolor: #ec1c23;
+$colorp: #949596;
+$mainfont: 16px;
+/*end global rules*/
+/*start upper nav*/
+.upper-nav {
+  padding: 10px;
+  .our-upper {
+    .caption {
+      text-align: end;
+    }
+    span,
+    i,
+    h5,
+    button {
+      color: #ccc;
+    }
+    button {
+      background: transparent;
+      border: 1px solid $secondcolor;
+      text-transform: uppercase;
+      margin-left: 4rem;
+    }
+  }
+}
+/*end upper nav*/
+/*start navbar*/
+.navbar {
+  .navbar-brand {
+    span {
+      color: $firstcolor;
+      font-weight: bolder;
+      font-size: $mainfont * 2;
+      strong {
+        color: $secondcolor;
+        font-size: $mainfont + 7;
+        font-weight: 400;
+      }
+    }
+  }
+  .collapse {
+    .navbar-nav {
+      .nav-item {
+        a {
+          padding-right: 15px;
+          color: $firstcolor;
+          @extend %upper;
+        }
+        .active {
+          color: $secondcolor;
+        }
+      }
+    }
+  }
+}
+/*end navbar*/
+/*start silder*/
+.slide {
+  .carousel-inner {
+    .carousel-item {
+      background-size: cover;
+    }
+    .slider-1,
+    .slider-2,
+    .slider-3 {
+      h3 {
+        margin-top: 10rem;
+        padding-left: 3rem;
+        color: #fff;
+        width: 500px;
+        font-size: $mainfont * 2;
+        position: relative;
+        :after {
+          content: "";
+          display: block;
+          width: 50px;
+          height: 50px;
+          background: linear-gradient(
+            rgba(76, 173, 63, 0.5),
+            rgba(201, 90, 90, 0.5)
+          );
+          border-radius: 50%;
+          position: absolute;
+          left: 30rem;
+        }
+        span {
+          background: $secondcolor;
+          padding: 1px 4px;
+          line-height: 2.5;
+        }
+        // animation: moving 7s 1 ease-in-out;
+        position: relative;
+        @keyframes moving {
+          0%,
+          100% {
+            top: 0;
+            left: 0;
+          }
+          50% {
+            top: 0;
+            left: 400px;
+          }
+        }
+      }
+    }
+    .slider-1 {
+      background: linear-gradient(
+          rgba(207, 52, 52, 0.5),
+          rgba(20, 89, 218, 0.5)
+        ),
+        url("../images/slider-1.jpg") no-repeat center center;
+    }
+    .slider-2 {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../images/slider-2.jpg") no-repeat center center;
+    }
+    .slider-3 {
+      background: linear-gradient(
+          rgba(107, 30, 75, 0.5),
+          rgba(28, 201, 158, 0.5)
+        ),
+        url("../images/slider-3.jpg") no-repeat center center;
+    }
+  }
+}
+/*end slider*/
+/*start features*/
+.features {
+  padding: 2rem 0;
+  .row {
+    .col-sm {
+      i {
+        background: $secondcolor;
+        color: #fff;
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+      }
+      h5 {
+        color: $firstcolor;
+      }
+      p {
+        color: $colorp;
+      }
+    }
+  }
+}
+/*end features*/
+/*start overview*/
+.overview {
+  background: #000000;
+  padding: 3rem 0;
+  .caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .head {
+      border-top: 2px solid #26e0d8;
+      border-bottom: 2px solid #26e0d8;
+      width: 400px;
+      h3 {
+        font-weight: bolder;
+        font-size: $mainfont * 2;
+        padding: 10px 0;
+      }
+    }
+    p {
+      margin: 2rem 10rem;
+      color: $colorp;
+    }
+    span {
+      letter-spacing: 9px;
+      font-weight: bolder;
+    }
+    .move-btn {
+      border-top: 1px solid #007bff;
+      border-bottom: 1px solid #007bff;
+      border-radius: 4px;
+      button {
+        transition: all 0.3s ease-in-out;
+        border: none;
+        &:hover {
+          background-color: white;
+          color: rgb(238, 150, 17);
+          box-shadow: 5px 5px 30px 4px gray;
+        }
+      }
+    }
+  }
+}
+/*end overview*/
+/*start image*/
+.image {
+  padding-top: 3rem;
+  .row {
+    ul {
+      display: grid;
+      grid-template-columns: repeat(6, 130px);
+      margin: auto;
+      li {
+        border: 1px solid $firstcolor;
+        color: $firstcolor;
+        margin-left: 2px;
+        padding: 5px 0;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+      }
+      .active,
+      :hover {
+        background: $secondcolor;
+        color: #fff;
+      }
+    }
+  }
+  .our-img {
+    padding: 3rem 0;
+    .row {
+      margin-left: 0;
+      margin-right: 0;
+      img {
+        padding-bottom: 4px;
+      }
+    }
+  }
+}
+/*end image*/
+/*start card*/
+.our-card {
+  padding-bottom: 2rem;
+  .head {
+    border-top: 2px solid #26e0d8;
+    border-bottom: 2px solid #26e0d8;
+    width: 400px;
+    margin: auto;
+  }
+  p {
+    margin: 2rem 10rem;
+    color: $colorp;
+  }
+  .row {
+    .card-title {
+      p {
+        margin: 0;
+        color: $colorp;
+      }
+    }
+    span {
+      color: $secondcolor;
+      font-size: $mainfont + 10;
+      font-weight: bolder;
+    }
+  }
+}
+/*end card*/
+/*start textimonial*/
+.carousel-fade {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/textimonial-back1.jpg");
+  background-size: cover;
+  .carousel-inner {
+    .carousel-item {
+      .carousel-caption {
+        img {
+          width: 150px;
+          height: 150px;
+        }
+        span {
+          color: rgba(53, 250, 240, 0.842);
+          font-weight: bolder;
+          font-size: $mainfont + 7;
+        }
+      }
+    }
+  }
+  .carousel-control-prev {
+    .span {
+      background: rgb(3, 3, 3) !important;
+      colo: $secondcolor !important;
+    }
+  }
+}
+/*end testimonial*/
+/*start table*/
+.table {
+  padding: 2rem 0;
+  margin-bottom: 0;
+  .title {
+    border-top: 2px solid #26e0d8;
+    border-bottom: 2px solid #26e0d8;
+    width: 400px;
+    margin: 2rem auto;
+    h3 {
+    }
+    p {
+      color: $colorp;
+    }
+  }
+  .row {
+    .col-md {
+      .caption-price {
+        padding-bottom: 10px;
+        width: 238px;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          padding-top: 5px;
+        }
+        h5 {
+          color: $firstcolor;
+          font-weight: bolder;
+          text-transform: capitalize;
+          padding-top: 20px;
+        }
+        span {
+          color: $colorp;
+        }
+        ul {
+          padding-top: 10px;
+          li {
+            padding: 10px 0;
+            color: $colorp;
+            &:nth-child(1) {
+              color: $firstcolor;
+              background: #f5f5f5;
+              font-weight: bolder;
+              font-size: $mainfont + 10;
+              transition: all 0.3s ease-in-out;
+              &:hover {
+                background: $secondcolor;
+                color: #fff;
+              }
+            }
+            span {
+              font-size: $mainfont;
+            }
+          }
+        }
+        button {
+        }
+      }
+    }
+  }
+}
+/*end table*/
+/*start why choose us*/
+.choose {
+  .container-fluid {
+    padding-left: 0;
+    .images {
+      padding-right: 0;
+    }
+    .title {
+      color: #fff;
+      padding-top: 4rem;
+      h4 {
+        text-transform: capitalize;
+      }
+      p {
+        color: $colorp;
+      }
+      button {
+        @extend %upper;
+      }
+    }
+  }
+}
+/*end why choose us*/
+/*start Statistics*/
+.Statistics {
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  .row {
+    margin-right: 0;
+    .col-md {
+      i {
+        color: $firstcolor;
+      }
+      strong {
+        color: $firstcolor;
+        font-size: $mainfont + 9;
+      }
+      span {
+        color: $secondcolor;
+      }
+    }
+  }
+}
+/*end Statistics*/
+/*start contact*/
+.contact {
+  background: #0e0e0e;
+  .row {
+    padding: 5rem 0;
+    .title {
+      color: #bbb2b2;
+    }
+    .btn {
+      button {
+        background: transparent;
+        color: #bbb2b2;
+        font-size: 22px;
+        padding: 2px 10px;
+        border: 1px solid #fff;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          background-color: white;
+          color: #ff9900;
+          box-shadow: 5px 5px 30px 4px grey;
+        }
+      }
+    }
+  }
+}
+/*end contact*/
+/*start footer*/
+.footer {
+  margin-top: 5rem;
+  .row {
+    .title {
+      span {
+        color: $firstcolor;
+        font-weight: bolder;
+        font-size: $mainfont * 2;
+        strong {
+          color: $secondcolor;
+          font-size: $mainfont + 10;
+          font-weight: 400;
+        }
+        &:last-child {
+          font-size: $mainfont;
+          padding-left: 5px;
+        }
+      }
+      p {
+        padding-top: 1rem;
+        color: $colorp;
+      }
+      i {
+        background: $firstcolor;
+        color: #fff;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+      }
+    }
+    .list {
+      padding-top: 15px;
+      ul {
+        padding-top: 1rem;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        li {
+          color: $firstcolor;
+          padding: 3px 0;
+          cursor: pointer;
+        }
+      }
+    }
+    .contact-me {
+      padding-top: 15px;
+      h4 {
+        color: $firstcolor;
+        text-transform: capitalize;
+      }
+      p {
+        padding-top: 1rem;
+        color: $colorp;
+      }
+      span {
+        &:last-child {
+          position: relative;
+          top: 1rem;
+          color: $secondcolor;
+          font-weight: bolder;
+        }
+      }
+    }
+  }
+}
+/*end footer*/
+/*about me*/
+.about-me {
+  .row {
+    .title {
+      p {
+        color: $colorp;
+        strong {
+          color: $firstcolor;
+          font-size: $mainfont + 9;
+        }
+      }
+    }
+    .icon {
+      i {
+        letter-spacing: 5rem;
+      }
+    }
+  }
+}
+/*extend classes*/
+%upper {
+  text-transform: uppercase;
+}

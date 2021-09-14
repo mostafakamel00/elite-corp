@@ -1,0 +1,99 @@
+/*start media query*/
+/*phone and tab screen*/
+@media(max-width: 767px)
+{
+    .upper-nav .our-upper  .caption {
+        text-align: start;
+        padding-top: 14px;
+    }
+    .navbar .collapse .navbar-nav {
+        display: flex;
+        align-items: center;
+    }
+    .overview p {
+        margin: 0 2rem;
+    }
+    .image .row ul {
+        display: grid;
+        grid-template-columns: repeat(2,150px);
+    }
+    .image .our-img {
+        display: flex;
+    }
+    .image .our-img .col-md-6 {
+        padding-left: 10px;
+    }
+    .our-card p {
+        margin: 2rem 0;
+    }
+    .carousel-fade .carousel-inner .carousel-item .carousel-caption img {
+        width: 100px;
+        height: 100px;
+    }
+    .table .row .col-md .caption-price {
+        margin: auto;
+    }
+    .table .row .col-md .corporate {
+        position: relative;
+        top: 15px;
+    }
+    .table .row .col-md .enter-price {
+        position: relative;
+        top: 30px
+    }
+    .choose .images img {
+        width: 482px;
+    }
+    .choose .title h4, p, button {
+        margin: 0 20px;
+    }
+    .Statistics .row {
+        display: grid;
+        grid-template-columns: repeat(2,auto);
+    }
+    .footer .row .title p {
+        margin: 0;
+    }
+    .footer .row .contact-me p {
+        margin: 0;
+    }
+    .about-me .title {
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    .about-me .icon {
+        text-align: end;
+    }
+}
+/*media screen*/
+@media(min-width: 768px) and (max-width: 991px)
+{
+    .navbar .collapse .navbar-nav {
+        display: flex;
+        align-items: center;
+    }
+    .image .row ul {
+        display: grid;
+        grid-template-columns: repeat(3,150px);
+    }
+    .table .row .col-md .caption-price:last-child {
+        margin: 20px auto;
+    }
+    .choose .container-fluid .images {
+        display: flex;
+    }
+    .about-me .row .icon i {
+        letter-spacing: 4rem;
+    }
+}
+/*large screen*/
+@media(min-width:992) and (max-width:1199px)
+{
+    
+}
+/*exrta large screen*/
+@media(min-width:1200px)
+{
+    
+}
+/*end media query*/
